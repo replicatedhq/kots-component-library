@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rian-replicated-design-system
+  name: kots-component-library
 spec:
   selector:
     matchLabels:
-      app: rian-replicated-design-system
+      app: kots-component-library
   replicas: 1
   template:
     metadata:
       labels:
-        app: rian-replicated-design-system
+        app: kots-component-library
     spec:
       containers:
-      - name: rian-replicated-design-system
-        image: okteto.dev/rian-replicated-design-system:latest
+      - name: kots-component-library
+        image: okteto.dev/kots-component-library:latest
         ports:
         - containerPort: 8080

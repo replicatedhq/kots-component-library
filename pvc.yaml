@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: replicated-design-system-dist
+  name: kots-component-library-dist
 spec:
   accessModes:
     - ReadWriteOnce

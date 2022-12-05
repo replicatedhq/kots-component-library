@@ -1,14 +1,14 @@
 build:
-  rian-replicated-design-system:
-    image: okteto.dev/rian-replicated-design-system:latest
+  kots-component-library:
+    image: okteto.dev/kots-component-library:latest
     context: ./
     dockerfile: Dockerfile
 deploy:
   - kubectl apply -f k8s --recursive
 dev:
-  rian-replicated-design-system:
+  kots-component-library:
     command: npm run storybook
     sync:
       - ./src:/src
     externalVolumes:
-      - replicated-design-system-dist:/dist
+      - kots-component-library-dist:/dist
